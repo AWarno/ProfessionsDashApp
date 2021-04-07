@@ -68,7 +68,7 @@ def displayClick(btn0, btn1, btn2, btn3):
         msg = 'Button 3 was most recently clicked'
     else:
         msg = page_0()
-    return html.Div(msg)
+    return msg
 
 
 @app.callback(Output('tests', 'children'),
@@ -81,7 +81,7 @@ def displayClick(value, max_time):
         msg = tests(dost='bp', max_time=max_time)
     else:
         msg = tests(dost='p', max_time=max_time)
-    return html.Div(msg)
+    return msg
 
 
 @app.callback(Output('stats_plot', 'children'),
@@ -92,17 +92,7 @@ def displayClick(btn):
         msg = dcc.Graph(figure=stats_plot(), style={})
     else:
         msg = ''
-    return html.Div(msg)
-
-
-
-
-# @app.callback(
-#     dash.dependencies.Output('main', 'children'),
-#     [dash.dependencies.Input('dost', 'value')])
-# def update_output(value):
-#     print('You have selected "{}"'.format(value))
-#     return 'You have selected "{}"'.format(value)
+    return msg
 
 
 if __name__ == '__main__':
