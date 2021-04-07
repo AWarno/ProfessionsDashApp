@@ -7,7 +7,7 @@ import numpy as np
 import random
 from sklearn.decomposition import PCA
 import plotly.express as px
-from utils.polar_plot import polar_plot
+from src.polar_plot import polar_plot
 
 TEST_PATH = 'data/tests.csv'
 TEST_URL = 'https://niezbednikmanagera.pl/wp-content/uploads/2020/01/kompetencjometr-1.png'

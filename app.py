@@ -3,7 +3,7 @@ from dash.dependencies import Input, Output
 import dash_html_components as html
 import dash_core_components as dcc
 import dash_bootstrap_components as dbc
-from utils.plots import pie_plot_1, pie_plot_2, tests, test_selector, stats, stats_plot
+from src.plots import pie_plot_1, pie_plot_2, tests, test_selector, stats, stats_plot
 from flask import Flask
 import plotly.graph_objects as go
 
@@ -17,8 +17,6 @@ app = dash.Dash(__name__, external_stylesheets=external_stylesheets, server=serv
 
 app.config['suppress_callback_exceptions'] = True
 app.config.suppress_callback_exceptions = True
-
-
 
 img_url = 'https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80'
 
