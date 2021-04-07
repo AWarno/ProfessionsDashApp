@@ -3,7 +3,7 @@ from dash.dependencies import Input, Output
 import dash_html_components as html
 import dash_core_components as dcc
 import dash_bootstrap_components as dbc
-from plots import pie_plot_1, pie_plot_2, tests, test_selector, stats, stats_plot
+from utils.plots import pie_plot_1, pie_plot_2, tests, test_selector, stats, stats_plot
 
 import plotly.graph_objects as go
 

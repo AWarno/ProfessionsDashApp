@@ -1,0 +1,7 @@
+dash==1.19.0
+gunicorn
+Flask==1.1.2
+numpy
+dash-bootstrap-components
+pandas
+sklearn
