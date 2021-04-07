@@ -4,7 +4,7 @@ import dash_html_components as html
 import dash_core_components as dcc
 import dash_bootstrap_components as dbc
 from utils.plots import pie_plot_1, pie_plot_2, tests, test_selector, stats, stats_plot
-
+from flask import Flask
 import plotly.graph_objects as go
 
 
@@ -12,7 +12,8 @@ NAVBAR_NAMES = ['Menu' ,'Testy', 'Statystyki', 'O nas']
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css', dbc.themes.BOOTSTRAP]
 
-app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+server = Flask(__name__)
+app = dash.Dash(__name__, external_stylesheets=external_stylesheets, server=server)
 
 app.config['suppress_callback_exceptions'] = True
 app.config.suppress_callback_exceptions = True
@@ -104,4 +105,5 @@ def displayClick(btn):
 #     return 'You have selected "{}"'.format(value)
 
 
-app.run_server(host='127.0.0.1', port='8000', debug=True, dev_tools_props_check=False)
+if __name__ == '__main__':
+    app.run_server()
